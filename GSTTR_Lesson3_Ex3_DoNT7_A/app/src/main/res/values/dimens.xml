@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="MainActivity_Button_CallAppByIntent_margintop">200dp</dimen>
+    <dimen name="MainActivity_Button_CallAppByBroadcast_marginTop">200dp</dimen>
+</resources>

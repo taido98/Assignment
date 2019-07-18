@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="MainActivity_TextView_marginTop">40dp</dimen>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GSTTR_Lesson3_Ex3_DoNT7_A</string>
+    <string name="MainActivity_nameButton_CallAppByIntent">Intent</string>
+    <string name="MainActivity_nameButton_CallAppByBroadcast">Broadcast</string>
+</resources>
