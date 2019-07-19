@@ -28,9 +28,18 @@ public class MainActivity extends AppCompatActivity {
     private final View.OnClickListener mStartAppByBroadcast = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent();
-            intent.setComponent(new ComponentName("gst.trainingcourse.lesson3_ex3_dont7_b", "gst.trainingcourse.lesson3_ex3_dont7_b.MainActivity"));
-            startActivity(intent);
+            Intent intent1 = new Intent();
+            intent1.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+            intent1.setAction("action.open.app");
+            sendBroadcast(intent1);
+            // send BroadcastReceiver to all app
+            List<ResolveInfo> list = getPackageManager().queryBroadcastReceivers(intent1, 0);
+            for (ResolveInfo r : list) {
+                String packageName = r.activityInfo.packageName;
+                String className = r.activityInfo.name;
+                intent1.setComponent(new ComponentName(packageName, className));
+                sendBroadcast(intent1);
+            }
         }
     };
 
